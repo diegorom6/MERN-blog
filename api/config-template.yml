@@ -1,0 +1,6 @@
+# Pasos para conectarte a una base de datos y que la aplicación funcione:
+# 1. Crea un archivo llamado config.yml en la raíz de la carpeta API.
+# 2. Crea la variable mongoose_connect y agrega la cadena de conexión de MongoDB Atlas como string.
+# 3. ¡Listo! Recuerda agregar tu IP a la lista de conexiones admitidas en Atlas o te saltarán errores de fetch.
+
+mongoose_connect: ""

@@ -6,24 +6,24 @@ export default function Post({
     title,
     summary,
     cover,
-    content,
     createdAt,
     author,
 }) {
     return (
         <div className="post">
-            <div className="image">
+            <div className="post-image">
                 <Link to={`/post/${_id}`}>
                     <img alt="" src={"http://localhost:4000/" + cover}></img>
                 </Link>
             </div>
+            
 
-            <div className="texts">
+            <div className="post-texts">
                 <Link to={`/post/${_id}`}>
                     <h2>{title}</h2>
                 </Link>
                 <p className="info">
-                    <a className="author">{author}</a>
+                    <a className="author">Escrito por: {author}</a>
                     <time>{format(new Date(createdAt), "dd-MM-yyyy")}</time>
                 </p>
                 <p className="summary">{summary}</p>

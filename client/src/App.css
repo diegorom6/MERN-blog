@@ -3,67 +3,120 @@
 }
 
 body {
-    color: #333;
+    color: white;
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right top;
+    border-radius: 7px 7px 0px 0px;
 }
 
-main {
-    padding: 10px;
-    max-width: 960px;
-    margin: 0 auto;
+.hero-page {
+    background-image: url('../public/img/escribir.webp');
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-header {
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 50px;
     align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 0rem 6rem;
+    height: 75px;
+    top: 0;
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-header a {
+.header-nav a {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
-header a.logo {
+.header-nav a.logo {
     font-weight: bold;
     font-size: 1.5rem;
+    color: white;
 }
 
-header nav {
+.header-nav div {
     display: flex;
     gap: 15px
 }
 
-div.post {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.cascada {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+.no-posts {
+    text-align: center;
+    margin: 12rem 0 10rem 0;
+}
+
+.post {
+    display: flex;
+    border: white solid 1px;
     margin-bottom: 30px;
+    flex-direction: column;
+    border-radius: 8px;
 }
 
-@media screen and (min-width: 700px) {
-    div.post {
-        grid-template-columns: .9fr 1.1fr;
-    }
+.post-image {
+    height: 20rem;
+    width: 25rem;
+    border-bottom: white solid 1px;
 }
 
-div.post div.texts h2 {
+.post-texts {
+    width: 25rem;
+    height: 10rem;
+    padding: 12px;
+}
+
+.post .post-texts h2 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
-div.post div.texts a {
+.post .post-texts a {
     text-decoration: none;
     color: inherit;
 }
 
-div.post p.info {
-    margin: 6px 0;
+.post p.info {
+    margin: 10px 0;
     color: #888;
     font-size: 0.7rem;
     font-weight: bold;
@@ -71,16 +124,35 @@ div.post p.info {
     gap: 10px;
 }
 
-div.post p.info a.author {
-    color: #333;
+.post p.info a.author {
+    color: white;
 }
 
-div.post p.summary {
+.post p.summary {
     margin: 10px 0;
     line-height: 1.4rem;
 }
 
-form.login, form.register {
+.creador {
+    display: flex;
+    margin-top: 8rem;
+    padding: 0rem 10rem;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.ql-editor {
+    height: 30rem !important;
+    background: #F7F6FC;
+    color: black;
+}
+
+.ql-toolbar.ql-snow {
+    background-color: white;
+}
+
+form.login,
+form.register {
     max-width: 400px;
     margin: 0 auto;
 }
@@ -105,7 +177,8 @@ button {
     padding: 7px 0;
 }
 
-form.login h1, form.register h1 {
+form.login h1,
+form.register h1 {
     text-align: center;
 }
 

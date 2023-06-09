@@ -27,11 +27,11 @@ export default function Header() {
     const username = userInfo?.username;
 
     return (
-        <header>
+        <nav className="header-nav">
             <Link to="/" className="logo">
-                MyBlog
+                Blog
             </Link>
-            <nav>
+            <div>
                 {username && (
                     <>
                         <Link to={"/create"} >Nuevo Post</Link>
@@ -45,7 +45,7 @@ export default function Header() {
                         <Link to="/register">Register</Link>
                     </>
                 )}
-            </nav>
-        </header>
+            </div>
+        </nav>
     );
 }
